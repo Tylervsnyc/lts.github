@@ -72,32 +72,32 @@
       "opening_message": "Welcome to the advanced quiz! Mr. Fluffbutt has some challenging questions about Chapter 2.",
       "questions": [
         {
-          "question": "***Mr. Fluffbutt lounges regally on his cat tree*** and asks: 'If Hudson earned $10 from his lemonade stand in Chapter 1, what percentage of his Chapter 2 earnings ($62) was that?'",
-          "choices": ["About 16%", "About 25%", "About 33%", "About 50%"],
-          "correct_answer": "About 16%",
-          "correct_response": "Excellent! $10 is about 16% of $62",
-          "incorrect_response": "Let's calculate that percentage. $10 divided by $62 is about 16%"
+          "question": "***Mr. Fluffbutt lounges regally on his cat tree*** and asks: 'How much money did Hudson earn from his lemonade stand in Chapter 1?'",
+          "choices": ["$5", "$10", "$15", "$20"],
+          "correct_answer": "$10",
+          "correct_response": "Correct! Hudson earned $10 from his lemonade stand.",
+          "incorrect_response": "Actually, Hudson earned $10 from his lemonade stand in Chapter 1."
         },
         {
-          "question": "***Mr. Fluffbutt kneads his favorite blanket*** and asks: 'In Chapter 2, if Hudson earned $30 from 2 hours of work at his first job, and $32 from 4 hours at his second job, which job paid better per hour?'",
-          "choices": ["First job at $15/hour", "Second job at $8/hour", "They paid the same", "Need more information"],
-          "correct_answer": "First job at $15/hour",
-          "correct_response": "Correct! First job: $15/hour, Second job: $8/hour",
-          "incorrect_response": "Let's compare: First job: $30 ÷ 2 = $15/hour, Second job: $32 ÷ 4 = $8/hour"
+          "question": "***Mr. Fluffbutt kneads his favorite blanket*** and asks: 'In Chapter 2, Hudson earned $30 from his first job. What was his job?'",
+          "choices": ["Walking dogs", "Mowing lawns", "Washing cars", "Selling cookies"],
+          "correct_answer": "Mowing lawns",
+          "correct_response": "That's right! Hudson earned $30 mowing lawns.",
+          "incorrect_response": "Actually, Hudson earned $30 from mowing lawns."
         },
         {
-          "question": "***Mr. Fluffbutt bats at a dust mote*** and asks: 'If Hudson's second job paid $8 per hour for 4 hours, what percentage of his total Chapter 2 earnings ($62) came from this job?'",
-          "choices": ["About 52%", "About 48%", "About 45%", "About 42%"],
-          "correct_answer": "About 52%",
-          "correct_response": "Perfect! $32 is about 52% of $62",
-          "incorrect_response": "Let's calculate: $32 ÷ $62 ≈ 52%"
+          "question": "***Mr. Fluffbutt grooms his whiskers*** and asks: 'If Hudson's second job paid $8 per hour and he worked for 4 hours, how much did he make total from this job?'",
+          "choices": ["$24", "$28", "$32", "$36"],
+          "correct_answer": "$32",
+          "correct_response": "Perfect! $8 × 4 = $32",
+          "incorrect_response": "Let's multiply that again. $8 per hour × 4 hours = $32"
         },
         {
-          "question": "***Mr. Fluffbutt wraps his tail around his paws*** and asks: 'If Hudson made $10 in Chapter 1 and $62 in Chapter 2, what's his total savings, and what percentage increase is that from Chapter 1?'",
-          "choices": ["$72, 620% increase", "$72, 720% increase", "$72, 520% increase", "$72, 420% increase"],
-          "correct_answer": "$72, 620% increase",
-          "correct_response": "Excellent! Total is $72, and $62 is a 620% increase from $10",
-          "incorrect_response": "The total is $72, and going from $10 to $72 is a 620% increase"
+          "question": "***Mr. Fluffbutt wraps his tail around his paws*** and asks: 'If Hudson made $10 in Chapter 1 and $62 in Chapter 2 ($30 + $32), what's his total savings so far?'",
+          "choices": ["$62", "$72", "$82", "$92"],
+          "correct_answer": "$72",
+          "correct_response": "Excellent! $10 + $62 = $72",
+          "incorrect_response": "Let's add that up again. $10 from Chapter 1 plus $62 from Chapter 2 equals $72."
         }
       ]
     }

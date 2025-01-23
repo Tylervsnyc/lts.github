@@ -140,6 +140,13 @@
           "correct_answer": "$72",
           "correct_response": "Meow-velous! Though I still think he should spend it all on a golden cat bed for yours truly...",
           "incorrect_response": "Scatters money everywhere Add last week's $10 to this week's $62 again, unless you're distracted by my magnificent tail!"
+        },
+        {
+          "question": "***Flicks tail thoughtfully*** How many days will Hudson watch ants this week?",
+          "choices": ["2", "3", "4", "5"],
+          "correct_answer": "3",
+          "correct_response": "Yes! Though I still don't understand why anyone would watch ants!",
+          "incorrect_response": "Rolls eyes Count those ant-watching days again!"
         }
       ]
     }

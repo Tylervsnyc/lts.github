@@ -1012,16 +1012,16 @@ body {
 
 #certificate-age {
     position: absolute;
-    top: 36%;  /* Aligned with "Age:" text */
-    left: 27%;  /* Just after "Age:" */
+    top: 33%;  /* Updated position */
+    left: 37%;  /* Updated position */
     font-size: 1.5rem;
     font-family: 'Georgia', serif;
 }
 
 #certificate-chapter {
     position: absolute;
-    top: 36%;  /* Aligned with "Chapter:" text */
-    left: 60%;  /* Just after "Chapter:" */
+    top: 33%;  /* Updated position */
+    left: 53%;  /* Updated position */
     font-size: 1.5rem;
     font-family: 'Georgia', serif;
 }

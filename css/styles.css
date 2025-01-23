@@ -1209,7 +1209,7 @@ body {
 
 /* Welcome message styling */
 .welcome-message {
-    background: linear-gradient(45deg, #4ECDC4, #7ed8d3);
+    background: linear-gradient(45deg, #4ECDC4, #7ed8d3);  /* Playful teal gradient */
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
@@ -1226,20 +1226,31 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     line-height: 1.6;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    background: linear-gradient(45deg, #003087, #004299);
+    background: linear-gradient(45deg, #003087, #004299);  /* Price is Right blue gradient */
     padding: 1.5rem;
     border-radius: 10px;
     border: 2px solid #FFD700;
+    animation: floatAround 3s ease-in-out infinite;
 }
 
 .name-input {
     margin: 2rem auto;
     text-align: center;
-    background: linear-gradient(45deg, #ff9a9a, #ffd700);
+    background: linear-gradient(45deg, #ff9a9a, #ffd700);  /* Warm sunset gradient */
     padding: 1.5rem;
     border-radius: 10px;
     max-width: 400px;
     border: 2px solid white;
+    animation: glowEffect 2s ease-in-out infinite;
+}
+
+@keyframes glowEffect {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255,215,0,0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255,215,0,0.5);
+    }
 }
 
 #student-name {

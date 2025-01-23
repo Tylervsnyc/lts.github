@@ -3,24 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.lightbulb-container');
     if (container) {  // Only run this code on pages with lightbulb container
         const title = document.querySelector('.watercolor-text');
-        const titleRect = title.getBoundingClientRect();
-        const padding = 20; // Space between title and lights
+        const titleBox = title.getBoundingClientRect();
+        const padding = 10; // Smaller padding for tighter border
         
-        // Number of bulbs for each side
-        const topBulbs = 20;
-        const sideBulbs = 12;
+        // Get the title's golden frame for positioning
+        const frame = title.querySelector('::before') || title;
+        const frameRect = frame.getBoundingClientRect();
+        
+        // Number of bulbs for each side (adjusted for rectangle shape)
+        const horizontalBulbs = 30; // More bulbs for longer sides
+        const verticalBulbs = 15;   // Fewer bulbs for shorter sides
         
         // Create top and bottom rows
-        for (let i = 0; i < topBulbs * 2; i++) {
+        for (let i = 0; i < horizontalBulbs * 2; i++) {
             const bulb = document.createElement('div');
             bulb.className = 'lightbulb';
             
-            // Calculate position
-            const x = (i / topBulbs) * 100;
-            // If in first half, place on top, else place on bottom
-            const y = i < topBulbs ? -padding : 100 + padding;
+            const progress = i / horizontalBulbs;
+            const x = progress * titleBox.width - padding;
+            const y = i < horizontalBulbs ? -padding : titleBox.height + padding;
             
-            bulb.style.left = `${x}%`;
+            bulb.style.left = `${x}px`;
             bulb.style.top = `${y}px`;
             bulb.style.animationDelay = `${Math.random() * 0.5}s`;
             
@@ -28,14 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Create left and right columns
-        for (let i = 0; i < sideBulbs * 2; i++) {
+        for (let i = 0; i < verticalBulbs * 2; i++) {
             const bulb = document.createElement('div');
             bulb.className = 'lightbulb';
             
-            // Calculate position
-            const y = ((i / sideBulbs) * 100) + padding; // Add padding to align with top/bottom rows
-            // If in first half, place on left, else place on right
-            const x = i < sideBulbs ? -padding : 100 + padding;
+            const progress = i / verticalBulbs;
+            const y = progress * titleBox.height;
+            const x = i < verticalBulbs ? -padding : titleBox.width + padding;
             
             bulb.style.left = `${x}px`;
             bulb.style.top = `${y}px`;

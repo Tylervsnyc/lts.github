@@ -69,35 +69,77 @@
       ]
     },
     "9": {
-      "opening_message": "Welcome to the advanced quiz! Mr. Fluffbutt has some challenging questions about Chapter 2.",
+      "opening_message": "***Adjusts position on highest perch*** Finally, someone Hudson's age! Let's test your knowledge about my apprentice's business adventure!",
       "questions": [
         {
-          "question": "***Mr. Fluffbutt lounges regally on his cat tree*** and asks: 'How much money did Hudson earn from his lemonade stand in Chapter 1?'",
-          "choices": ["$5", "$10", "$15", "$20"],
-          "correct_answer": "$10",
-          "correct_response": "Correct! Hudson earned $10 from his lemonade stand.",
-          "incorrect_response": "Actually, Hudson earned $10 from his lemonade stand in Chapter 1."
+          "question": "***Twitches whiskers curiously*** What two jobs does my apprentice Hudson do?",
+          "choices": ["Dogs and cats", "Cats and birds", "Cats and ants", "Ants and dogs"],
+          "correct_answer": "Cats and ants",
+          "correct_response": "Indeed! One magnificent job and one... less magnificent.",
+          "incorrect_response": "Shakes head dramatically Pay more attention to the story!"
         },
         {
-          "question": "***Mr. Fluffbutt kneads his favorite blanket*** and asks: 'In Chapter 2, Hudson earned $30 from his first job. What was his job?'",
-          "choices": ["Walking dogs", "Mowing lawns", "Washing cars", "Selling cookies"],
-          "correct_answer": "Mowing lawns",
-          "correct_response": "That's right! Hudson earned $30 mowing lawns.",
-          "incorrect_response": "Actually, Hudson earned $30 from mowing lawns."
+          "question": "***Stretches lazily*** How much does Hudson make in 3 days of watching me?",
+          "choices": ["$20", "$25", "$30", "$35"],
+          "correct_answer": "$30",
+          "correct_response": "Excellent multiplication skills!",
+          "incorrect_response": "Paws at calculator Try $10 times 3 again!"
         },
         {
-          "question": "***Mr. Fluffbutt grooms his whiskers*** and asks: 'If Hudson's second job paid $8 per hour and he worked for 4 hours, how much did he make total from this job?'",
-          "choices": ["$24", "$28", "$32", "$36"],
-          "correct_answer": "$32",
-          "correct_response": "Perfect! $8 × 4 = $32",
-          "incorrect_response": "Let's multiply that again. $8 per hour × 4 hours = $32"
+          "question": "***Flicks tail thoughtfully*** How much did Hudson spend on his flyers?",
+          "choices": ["$2", "$3", "$4", "$5"],
+          "correct_answer": "$3",
+          "correct_response": "Yes, those paper things weren't cheap!",
+          "incorrect_response": "Rolls eyes Check the expense report again!"
         },
         {
-          "question": "***Mr. Fluffbutt wraps his tail around his paws*** and asks: 'If Hudson made $10 in Chapter 1 and $62 in Chapter 2 ($30 + $32), what's his total savings so far?'",
+          "question": "***Perks ears up*** If Hudson watches ants for 3 days at $5 per day, how much money will he make?",
+          "choices": ["$10", "$15", "$20", "$25"],
+          "correct_answer": "$15",
+          "correct_response": "Three days at $5 each - purr-fect math!",
+          "incorrect_response": "Bats playfully Multiply 3 by $5 again!"
+        },
+        {
+          "question": "***Sits up proudly*** How much more do I pay per day than the ant-watching job?",
+          "choices": ["$2", "$5", "$7", "$10"],
+          "correct_answer": "$5",
+          "correct_response": "Of course! I pay $10 while ants only pay $5!",
+          "incorrect_response": "Tail puffs up Subtract $5 from $10 and try again!"
+        },
+        {
+          "question": "***Licks paw thoughtfully*** How many flyers did Hudson print?",
+          "choices": ["2", "3", "4", "5"],
+          "correct_answer": "3",
+          "correct_response": "Your memory is as sharp as my claws!",
+          "incorrect_response": "Nudges paper Count those flyers again!"
+        },
+        {
+          "question": "***Sprawls across accounting ledger*** Darling, how much money did my apprentice make in TOTAL this week from both watching magnificent ME and those silly ants?",
+          "choices": ["$60", "$65", "$70", "$75"],
+          "correct_answer": "$65",
+          "correct_response": "Purrfect! $50 for ME-time plus $15 for ant-duty equals success!",
+          "incorrect_response": "Falls dramatically off ledger Oh dear, add ALL the income again - both my royal payments AND the ant money!"
+        },
+        {
+          "question": "***Shreds receipt playfully*** What expenses did my little entrepreneur have? You know, those paper things he posted everywhere?",
+          "choices": ["$2", "$3", "$4", "$5"],
+          "correct_answer": "$3",
+          "correct_response": "Yes! Though I still think spending money on premium cat treats would have been better marketing...",
+          "incorrect_response": "Bats receipt under couch Check those numbers again, unless you want me to knock your calculator off the table!"
+        },
+        {
+          "question": "***Prances across calculator*** After paying for those silly flyers, how much profit did Hudson actually make this week? That's revenue minus expenses, if you're not too busy admiring my fur.",
+          "choices": ["$57", "$62", "$67", "$72"],
+          "correct_answer": "$62",
+          "correct_response": "$65 minus $3... you're almost as good at math as I am at napping!",
+          "incorrect_response": "Knocks calculator to floor Revenue minus expenses, dear. Even a kitten could do this math!"
+        },
+        {
+          "question": "***Lounges on pile of money*** Now for the grand finale - after adding this week's profit to last week's earnings, how much money does my apprentice have in total? Remember, he had $10 from watching ME last week!",
           "choices": ["$62", "$72", "$82", "$92"],
           "correct_answer": "$72",
-          "correct_response": "Excellent! $10 + $62 = $72",
-          "incorrect_response": "Let's add that up again. $10 from Chapter 1 plus $62 from Chapter 2 equals $72."
+          "correct_response": "Meow-velous! Though I still think he should spend it all on a golden cat bed for yours truly...",
+          "incorrect_response": "Scatters money everywhere Add last week's $10 to this week's $62 again, unless you're distracted by my magnificent tail!"
         }
       ]
     }

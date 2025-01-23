@@ -2,15 +2,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lightbulb generation for main page
     const container = document.querySelector('.lightbulb-container');
     if (container) {  // Only run this code on pages with lightbulb container
-        const numBulbs = 50;
+        const numBulbs = 60; // Increased for better coverage
+        const title = document.querySelector('.watercolor-text');
+        const rect = title.getBoundingClientRect();
         
-        for (let i = 0; i < numBulbs; i++) {
+        // Create bulbs for top and bottom
+        for (let i = 0; i < numBulbs/2; i++) {
             const bulb = document.createElement('div');
             bulb.className = 'lightbulb';
             
-            const angle = (i / numBulbs) * 2 * Math.PI;
-            const x = 50 + 50 * Math.cos(angle);
-            const y = 50 + 50 * Math.sin(angle);
+            // Position horizontally along top or bottom
+            const x = (i / (numBulbs/4)) * 100;
+            const y = i < numBulbs/4 ? -10 : 110; // -10 for top, 110 for bottom
+            
+            bulb.style.left = `${x}%`;
+            bulb.style.top = `${y}%`;
+            bulb.style.animationDelay = `${Math.random() * 0.5}s`;
+            
+            container.appendChild(bulb);
+        }
+        
+        // Create bulbs for left and right sides
+        for (let i = 0; i < numBulbs/2; i++) {
+            const bulb = document.createElement('div');
+            bulb.className = 'lightbulb';
+            
+            // Position vertically along left or right
+            const y = (i / (numBulbs/4)) * 100;
+            const x = i < numBulbs/4 ? -10 : 110; // -10 for left, 110 for right
             
             bulb.style.left = `${x}%`;
             bulb.style.top = `${y}%`;
@@ -42,32 +61,23 @@ const sassyResponses = {
     ]
 };
 
-function handleGoofAnswer(type) {
-    const sassyElement = document.getElementById('sassy-response');
-    sassyElement.textContent = sassyResponses[type][Math.min(goofCount, 1)];
-    sassyElement.classList.remove('hidden');
-    
-    goofCount++;
-    
-    if (goofCount >= 2) {
-        // Disable the goof answer buttons
-        document.querySelectorAll('.age-button').forEach(btn => {
-            if (btn.onclick.toString().includes('handleGoofAnswer')) {
-                btn.disabled = true;
-                btn.style.opacity = '0.5';
-            }
-        });
-    }
-}
-
-function selectAge(ageGroup) {
-    if (goofCount < 2) {
+function handleAgeSelection(button, selection) {
+    // Check if it's a goof answer
+    if (selection === 'baby' || selection === 'ship') {
         const sassyElement = document.getElementById('sassy-response');
-        sassyElement.textContent = "Nice try, but maybe try being silly first? Mr. Fluffbutt insists!";
+        sassyElement.textContent = sassyResponses[selection][Math.min(goofCount, 1)];
         sassyElement.classList.remove('hidden');
-        return;
+        goofCount++;
+        
+        if (goofCount >= 2) {
+            // Just disable the clicked goof button
+            button.disabled = true;
+            button.style.opacity = '0.5';
+        }
+    } else {
+        // Handle real age selection
+        console.log(`Selected age: ${selection}`);
+        // Add your age selection logic here
+        // This could be navigation to the next page or starting the game
     }
-    // Handle the actual age selection
-    console.log(`Selected age group: ${ageGroup}`);
-    // Add your age selection logic here
 } 

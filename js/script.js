@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
 let goofCount = 0;
 const sassyResponses = {
     baby: [
-        "Really? You can type? That's impressive for someone who just said 'WAH WAH'",
-        "Okay tiny human, let's try this one more time..."
+        "Wow, a typing baby! Next you'll tell me you can do calculus...",
+        "Still claiming to be a baby? Let's try picking your real age this time..."
     ],
     ship: [
-        "I'm pretty sure ships can't use computers. Nice try though!",
-        "Alright, you've had your fun. Time to pick your real age..."
+        "Last time I checked, wooden ships don't have fingers to click buttons...",
+        "Okay Captain, time to drop anchor and pick your actual age..."
     ]
 };
 
@@ -50,13 +50,23 @@ function handleGoofAnswer(type) {
     goofCount++;
     
     if (goofCount >= 2) {
-        // Hide goof answers and show real age options
-        document.querySelectorAll('.goof-answer').forEach(btn => btn.style.display = 'none');
-        document.querySelectorAll('.real-answer').forEach(btn => btn.classList.remove('hidden'));
+        // Disable the goof answer buttons
+        document.querySelectorAll('.age-button').forEach(btn => {
+            if (btn.onclick.toString().includes('handleGoofAnswer')) {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+            }
+        });
     }
 }
 
 function selectAge(ageGroup) {
+    if (goofCount < 2) {
+        const sassyElement = document.getElementById('sassy-response');
+        sassyElement.textContent = "Nice try, but maybe try being silly first? Mr. Fluffbutt insists!";
+        sassyElement.classList.remove('hidden');
+        return;
+    }
     // Handle the actual age selection
     console.log(`Selected age group: ${ageGroup}`);
     // Add your age selection logic here

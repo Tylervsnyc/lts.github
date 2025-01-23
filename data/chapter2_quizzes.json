@@ -1,0 +1,20 @@
+{
+  "chapter": 2,
+  "welcome_message": "Stretches and yawns regally Well, well, if it isn't another curious human coming to learn about my apprentice's business venture. Hudson's actually showing promise... for a human, that is. I've been supervising his progress (when I'm not napping), and I suppose I could test your knowledge about his entrepreneurial adventures. Think you can handle my challenging questions? flicks tail Let's find out!",
+  "age_groups": {
+    "6-7": {
+      "opening_message": "Settles into favorite cushion Alright, tiny humans, gather 'round. Since you're just starting to learn about business like my apprentice Hudson, I'll try not to make these questions too difficult... maybe.",
+      "questions": [
+        {
+          "id": "2-67-1",
+          "question": "Batting playfully at calculator First things first - how much did my apprentice spend on those paper things... what do you call them... ah yes, flyers?",
+          "choices": ["$1", "$2", "$3", "$4"],
+          "correct_answer": "$3",
+          "correct_response": "At least you can count money better than I can count fish!",
+          "incorrect_response": "Licks paw dismissively Did you count on your toes? Try again!"
+        }
+        // I'll continue with the rest of the 6-7 questions...
+      ]
+    }
+  }
+} 

@@ -34,17 +34,14 @@ function showWelcomeMessage(message) {
     quizContainer.innerHTML = `
         <div class="welcome-message">
             <p class="fluffbutt-message">${message}</p>
-            <div class="name-input-container">
-                <div class="input-wrapper">
-                    <label for="student-name">What's your first name, young entrepreneur?</label>
-                    <input 
-                        type="text" 
-                        id="student-name" 
-                        placeholder="Enter your first name"
-                        onkeyup="checkNameInput()"
-                        maxlength="20"
-                    >
-                </div>
+            <div class="name-input">
+                <input 
+                    type="text" 
+                    id="student-name" 
+                    placeholder="Enter your first name"
+                    onkeyup="checkNameInput()"
+                    maxlength="20"
+                >
             </div>
             <button class="choice-button" id="start-button" onclick="startQuiz()" disabled>
                 Begin Quiz

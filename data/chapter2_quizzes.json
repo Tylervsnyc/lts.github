@@ -3,257 +3,101 @@
   "welcome_message": "Stretches and yawns regally Well, well, if it isn't another curious human coming to learn about my apprentice's business venture. Hudson's actually showing promise... for a human, that is. I've been supervising his progress (when I'm not napping), and I suppose I could test your knowledge about his entrepreneurial adventures. Think you can handle my challenging questions? flicks tail Let's find out!",
   "age_groups": {
     "6-7": {
-      "opening_message": "Settles into favorite cushion Alright, tiny humans, gather 'round. Since you're just starting to learn about business like my apprentice Hudson, I'll try not to make these questions too difficult... maybe.",
+      "opening_message": "Welcome young mathematician! Mr. Fluffbutt has some questions for you about Chapter 2.",
       "questions": [
         {
-          "id": "2-67-1",
-          "question": "Batting playfully at calculator First things first - how much did my apprentice spend on those paper things... what do you call them... ah yes, flyers?",
-          "choices": ["$1", "$2", "$3", "$4"],
-          "correct_answer": "$3",
-          "correct_response": "At least you can count money better than I can count fish!",
-          "incorrect_response": "Licks paw dismissively Did you count on your toes? Try again!"
-        },
-        {
-          "id": "2-67-2",
-          "question": "Stretches lazily How many of those flyers did Hudson print? I watched him from my window perch.",
-          "choices": ["2", "3", "4", "5"],
-          "correct_answer": "3",
-          "correct_response": "Just like counting my favorite toys... correct!",
-          "incorrect_response": "Even a sleepy kitten could count better than that!"
-        },
-        {
-          "id": "2-67-3",
-          "question": "Wrinkles nose Now, about those ants he's watching - how much does he make per day? Obviously less than watching ME.",
-          "choices": ["$3", "$4", "$5", "$10"],
-          "correct_answer": "$5",
-          "correct_response": "Ants pay less than cats, obviously!",
-          "incorrect_response": "Swats playfully Wrong! Ants are small, but not THAT small!"
-        },
-        {
-          "id": "2-67-4",
-          "question": "Grooms whiskers thoughtfully When Hudson started his day, how much money did he have? He earned it watching yours truly, you know.",
+          "question": "***Mr. Fluffbutt stretches lazily on the counter*** and asks: 'How much money did Hudson make in Chapter 1 from his lemonade stand?'",
           "choices": ["$5", "$10", "$15", "$20"],
           "correct_answer": "$10",
-          "correct_response": "That's what he earned watching ME yesterday!",
-          "incorrect_response": "Tail swish No, no, no! That's not what quality time with ME is worth!"
+          "correct_response": "Correct! Hudson made $10 from his lemonade stand.",
+          "incorrect_response": "Not quite. Hudson made $10 from his lemonade stand in Chapter 1."
         },
         {
-          "id": "2-67-5",
-          "question": "Perks ears How many places did my apprentice put those flyers? I supervised from various windowsills.",
-          "choices": ["1", "2", "3", "4"],
-          "correct_answer": "3",
-          "correct_response": "You're keeping track! I'm almost impressed.",
-          "incorrect_response": "Rolls over dramatically Were you napping during that part?"
+          "question": "***Mr. Fluffbutt paws at his food bowl*** and asks: 'In Chapter 2, Hudson made $30 from his first job. How much did he make from his second job?'",
+          "choices": ["$22", "$32", "$42", "$52"],
+          "correct_answer": "$32",
+          "correct_response": "That's right! Hudson made $32 from his second job.",
+          "incorrect_response": "Actually, Hudson made $32 from his second job."
         },
         {
-          "id": "2-67-6",
-          "question": "Sits up proudly Now, what's worth more: watching magnificent ME for one day or those three flyers?",
-          "choices": ["Mr. Fluffbutt", "The flyers"],
-          "correct_answer": "Mr. Fluffbutt",
-          "correct_response": "Of course I'm worth more! I'm priceless!",
-          "incorrect_response": "Hisses HOW DARE YOU suggest paper is worth more than ME!"
-        },
-        {
-          "id": "2-67-7",
-          "question": "Yawns How many days will Hudson watch those boring ants? I counted while napping.",
-          "choices": ["2 days", "3 days", "4 days", "5 days"],
-          "correct_answer": "3 days",
-          "correct_response": "Wednesday, Thursday, Friday... you can count!",
-          "incorrect_response": "Bats at calendar Count the days again, like counting treats!"
-        },
-        {
-          "id": "2-67-8",
-          "question": "Counts on paw How much does Hudson make watching me for 5 days?",
-          "choices": ["$40", "$45", "$50", "$55"],
-          "correct_answer": "$50",
-          "correct_response": "That's right! Quality time with ME adds up!",
-          "incorrect_response": "Rolls eyes Try multiplying by my daily rate again!"
-        },
-        {
-          "id": "2-67-9",
-          "question": "Stretches thoughtfully And how much will he make watching those ants for 3 days?",
-          "choices": ["$10", "$15", "$20", "$25"],
-          "correct_answer": "$15",
-          "correct_response": "Now you're adding like a pro!",
-          "incorrect_response": "Bats at calculator Count those ant-watching days again!"
-        },
-        {
-          "id": "2-67-10",
-          "question": "Sits up regally So, after spending $3 on flyers, how much money will Hudson have at the end of this week from watching ME and the ants?",
+          "question": "***Mr. Fluffbutt curls up in a sunny spot*** and asks: 'If Hudson made $30 from his first job and $32 from his second job in Chapter 2, how much did he make total in Chapter 2?'",
           "choices": ["$52", "$62", "$72", "$82"],
           "correct_answer": "$62",
-          "correct_response": "Purrfect! Hudson's getting richer, thanks to my excellent business guidance!",
-          "incorrect_response": "Flops over Add everything together: My payments, ant money, minus flyers!"
+          "correct_response": "Perfect! $30 + $32 = $62",
+          "incorrect_response": "Let's try that math again. $30 + $32 = $62"
+        },
+        {
+          "question": "***Mr. Fluffbutt twitches his tail thoughtfully*** and asks: 'If Hudson made $10 in Chapter 1 and $62 in Chapter 2, how much money does he have in total?'",
+          "choices": ["$62", "$72", "$82", "$92"],
+          "correct_answer": "$72",
+          "correct_response": "Excellent! $10 + $62 = $72",
+          "incorrect_response": "Not quite. $10 from Chapter 1 plus $62 from Chapter 2 equals $72."
         }
       ]
     },
     "8": {
-      "opening_message": "Adjusts whiskers Ah, an 8-year-old entrepreneur in training! Let's see if you can handle some real business calculations!",
+      "opening_message": "Ready for a challenge? Mr. Fluffbutt has some tricky questions about Chapter 2!",
       "questions": [
         {
-          "id": "2-8-1",
-          "question": "Grooms paw How much does Hudson make each day watching me?",
-          "choices": ["$5", "$10", "$15", "$20"],
-          "correct_answer": "$10",
-          "correct_response": "Of course! I'm worth every penny!",
-          "incorrect_response": "Tail swish Have you forgotten my value already?"
-        },
-        {
-          "id": "2-8-2",
-          "question": "Stretches lazily And what's his daily rate for ant-watching?",
-          "choices": ["$3", "$4", "$5", "$6"],
-          "correct_answer": "$5",
-          "correct_response": "Half what I'm worth, naturally!",
-          "incorrect_response": "Pay attention to the ant rates!"
-        },
-        {
-          "id": "2-8-3",
-          "question": "Yawns How many days total will Hudson work this week?",
-          "choices": ["5", "6", "7", "8"],
-          "correct_answer": "8",
-          "correct_response": "5 with me, 3 with ants... busy human!",
-          "incorrect_response": "Bats at calendar Count ALL the working days!"
-        },
-        {
-          "id": "2-8-4",
-          "question": "Perks up What's Hudson's income from watching me all week?",
-          "choices": ["$40", "$50", "$60", "$70"],
-          "correct_answer": "$50",
-          "correct_response": "Five days of quality time with ME!",
-          "incorrect_response": "Multiply my daily rate by 5, like counting treats!"
-        },
-        {
-          "id": "2-8-5",
-          "question": "Licks paw And how much will he make from those three ant-watching days?",
+          "question": "***Mr. Fluffbutt perches on the windowsill*** and asks: 'How much money did Hudson earn from his lemonade stand in Chapter 1?'",
           "choices": ["$10", "$15", "$20", "$25"],
-          "correct_answer": "$15",
-          "correct_response": "Three days of ant-watching adds up!",
-          "incorrect_response": "Try multiplying again, like counting fish!"
+          "correct_answer": "$10",
+          "correct_response": "Correct! Hudson earned $10 from his lemonade stand.",
+          "incorrect_response": "Actually, Hudson earned $10 from his lemonade stand in Chapter 1."
         },
         {
-          "id": "2-8-6",
-          "question": "Sits up straight What's Hudson's total income before expenses?",
-          "choices": ["$55", "$60", "$65", "$70"],
-          "correct_answer": "$65",
-          "correct_response": "Add it all together - cat money AND ant money!",
-          "incorrect_response": "Rolls over Add ALL the income sources!"
+          "question": "***Mr. Fluffbutt sharpens his claws on his scratching post*** and asks: 'In Chapter 2, Hudson earned $30 from his first job. What was his hourly rate if he worked for 2 hours?'",
+          "choices": ["$10/hour", "$15/hour", "$20/hour", "$25/hour"],
+          "correct_answer": "$15/hour",
+          "correct_response": "Perfect! $30 ÷ 2 = $15 per hour",
+          "incorrect_response": "Let's calculate that again. $30 divided by 2 hours = $15 per hour"
         },
         {
-          "id": "2-8-7",
-          "question": "Flicks tail How much did those flyers cost him?",
-          "choices": ["$2", "$3", "$4", "$5"],
-          "correct_answer": "$3",
-          "correct_response": "Marketing expenses! Very professional!",
-          "incorrect_response": "Check the flyer costs again!"
+          "question": "***Mr. Fluffbutt grooms his whiskers*** and asks: 'Hudson's second job paid $8 per hour. If he earned $32, how many hours did he work?'",
+          "choices": ["2 hours", "3 hours", "4 hours", "5 hours"],
+          "correct_answer": "4 hours",
+          "correct_response": "That's right! $32 ÷ $8 = 4 hours",
+          "incorrect_response": "Let's solve this. If he earned $32 at $8 per hour, he worked 4 hours."
         },
         {
-          "id": "2-8-8",
-          "question": "Narrows eyes If Hudson spent $3 on flyers, what's his total profit for the week?",
-          "choices": ["$52", "$62", "$72", "$82"],
-          "correct_answer": "$62",
-          "correct_response": "Income minus expenses equals success!",
-          "incorrect_response": "Paws at calculator Subtract those expenses properly!"
-        },
-        {
-          "id": "2-8-9",
-          "question": "Purrs thoughtfully What fraction of his $500 bike goal will Hudson have after this week?",
-          "choices": ["1/10", "1/8", "1/5", "1/4"],
-          "correct_answer": "1/8",
-          "correct_response": "Fractions and money - now that's getting serious!",
-          "incorrect_response": "Divide his savings by the bike cost again!"
-        },
-        {
-          "id": "2-8-10",
-          "question": "Sits regally So, going into next week, how much money does Hudson have in total?",
-          "choices": ["$52", "$62", "$72", "$82"],
-          "correct_answer": "$62",
-          "correct_response": "You've mastered Hudson's business math!",
-          "incorrect_response": "That's not what my business ledger shows!"
+          "question": "***Mr. Fluffbutt swishes his tail impatiently*** and asks: 'If Hudson made $10 in Chapter 1 and $62 in Chapter 2 ($30 + $32), what's his total savings so far?'",
+          "choices": ["$62", "$72", "$82", "$92"],
+          "correct_answer": "$72",
+          "correct_response": "Excellent! $10 + $62 = $72",
+          "incorrect_response": "Let's add that up again. $10 from Chapter 1 plus $62 from Chapter 2 equals $72."
         }
       ]
     },
     "9": {
-      "opening_message": "Adjusts position on highest perch Finally, someone Hudson's age! Let's see if you can handle some serious business calculations!",
+      "opening_message": "Welcome to the advanced quiz! Mr. Fluffbutt has some challenging questions about Chapter 2.",
       "questions": [
         {
-          "id": "2-9-1",
-          "question": "Studies claws What's Hudson's total working hours this week? Count 1 hour per job per day.",
-          "choices": ["5", "6", "7", "8"],
-          "correct_answer": "8",
-          "correct_response": "You can count hours like I count naps!",
-          "incorrect_response": "Add ALL working hours together!"
+          "question": "***Mr. Fluffbutt lounges regally on his cat tree*** and asks: 'If Hudson earned $10 from his lemonade stand in Chapter 1, what percentage of his Chapter 2 earnings ($62) was that?'",
+          "choices": ["About 16%", "About 25%", "About 33%", "About 50%"],
+          "correct_answer": "About 16%",
+          "correct_response": "Excellent! $10 is about 16% of $62",
+          "incorrect_response": "Let's calculate that percentage. $10 divided by $62 is about 16%"
         },
         {
-          "id": "2-9-2",
-          "question": "Stretches thoughtfully What's Hudson's average daily income when he works both jobs?",
-          "choices": ["$10", "$15", "$20", "$25"],
-          "correct_answer": "$15",
-          "correct_response": "Cat-sitting AND ant-watching combined!",
-          "incorrect_response": "Add both daily rates together!"
+          "question": "***Mr. Fluffbutt kneads his favorite blanket*** and asks: 'In Chapter 2, if Hudson earned $30 from 2 hours of work at his first job, and $32 from 4 hours at his second job, which job paid better per hour?'",
+          "choices": ["First job at $15/hour", "Second job at $8/hour", "They paid the same", "Need more information"],
+          "correct_answer": "First job at $15/hour",
+          "correct_response": "Correct! First job: $15/hour, Second job: $8/hour",
+          "incorrect_response": "Let's compare: First job: $30 ÷ 2 = $15/hour, Second job: $32 ÷ 4 = $8/hour"
         },
         {
-          "id": "2-9-3",
-          "question": "Yawns If Hudson works 5 days with me at $10 and 3 days with ants at $5, what's his total revenue?",
-          "choices": ["$55", "$60", "$65", "$70"],
-          "correct_answer": "$65",
-          "correct_response": "Now that's how you calculate revenue!",
-          "incorrect_response": "Try: (5 × $10) + (3 × $5)!"
+          "question": "***Mr. Fluffbutt bats at a dust mote*** and asks: 'If Hudson's second job paid $8 per hour for 4 hours, what percentage of his total Chapter 2 earnings ($62) came from this job?'",
+          "choices": ["About 52%", "About 48%", "About 45%", "About 42%"],
+          "correct_answer": "About 52%",
+          "correct_response": "Perfect! $32 is about 52% of $62",
+          "incorrect_response": "Let's calculate: $32 ÷ $62 ≈ 52%"
         },
         {
-          "id": "2-9-4",
-          "question": "Licks paw What's Hudson's marketing expense ratio? That's flyer cost divided by weekly revenue.",
-          "choices": ["1/25", "1/20", "1/15", "1/10"],
-          "correct_answer": "1/20",
-          "correct_response": "Calculating business ratios like a pro!",
-          "incorrect_response": "Divide $3 by $65 again!"
-        },
-        {
-          "id": "2-9-5",
-          "question": "Perks ears What's Hudson's profit margin percentage? That's profit divided by revenue times 100.",
-          "choices": ["85%", "90%", "95%", "100%"],
-          "correct_answer": "95%",
-          "correct_response": "Now that's a healthy profit margin!",
-          "incorrect_response": "Try: ($62 ÷ $65) × 100!"
-        },
-        {
-          "id": "2-9-6",
-          "question": "Swishes tail If Hudson maintains this weekly income, how many weeks until he has $500?",
-          "choices": ["6", "7", "8", "9"],
-          "correct_answer": "8",
-          "correct_response": "Planning ahead? Very entrepreneurial!",
-          "incorrect_response": "Divide $500 by weekly profit!"
-        },
-        {
-          "id": "2-9-7",
-          "question": "Narrows eyes What's Hudson's hourly rate when watching me versus the ants?",
-          "choices": ["$10/$5", "$8/$4", "$12/$6", "$15/$7"],
-          "correct_answer": "$10/$5",
-          "correct_response": "Naturally, I command premium rates!",
-          "incorrect_response": "Calculate both hourly rates!"
-        },
-        {
-          "id": "2-9-8",
-          "question": "Grooms whiskers What percentage of Hudson's weekly income comes from cat-sitting?",
-          "choices": ["65%", "70%", "75%", "80%"],
-          "correct_answer": "77%",
-          "correct_response": "I generate most of his revenue, obviously!",
-          "incorrect_response": "Try: ($50 ÷ $65) × 100!"
-        },
-        {
-          "id": "2-9-9",
-          "question": "Stretches lazily After expenses, what's Hudson's daily average profit this week?",
-          "choices": ["$6", "$7", "$8", "$9"],
-          "correct_answer": "$7.75",
-          "correct_response": "Calculating daily averages now!",
-          "incorrect_response": "Divide weekly profit by working days!"
-        },
-        {
-          "id": "2-9-10",
-          "question": "Sits majestically So, after all expenses and calculations, how much money does Hudson have in his business account?",
-          "choices": ["$52", "$62", "$72", "$82"],
-          "correct_answer": "$62",
-          "correct_response": "You've mastered business mathematics!",
-          "incorrect_response": "Check ALL income and expenses one last time!"
+          "question": "***Mr. Fluffbutt wraps his tail around his paws*** and asks: 'If Hudson made $10 in Chapter 1 and $62 in Chapter 2, what's his total savings, and what percentage increase is that from Chapter 1?'",
+          "choices": ["$72, 620% increase", "$72, 720% increase", "$72, 520% increase", "$72, 420% increase"],
+          "correct_answer": "$72, 620% increase",
+          "correct_response": "Excellent! Total is $72, and $62 is a 620% increase from $10",
+          "incorrect_response": "The total is $72, and going from $10 to $72 is a 620% increase"
         }
       ]
     }

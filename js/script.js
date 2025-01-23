@@ -50,4 +50,37 @@ document.addEventListener('DOMContentLoaded', function() {
             0 0 15px #f7d547,
             0 0 20px #f7d547;
     }
+}
+
+let goofCount = 0;
+const sassyResponses = {
+    baby: [
+        "Really? You can type? That's impressive for someone who just said 'WAH WAH'",
+        "Okay tiny human, let's try this one more time..."
+    ],
+    ship: [
+        "I'm pretty sure ships can't use computers. Nice try though!",
+        "Alright, you've had your fun. Time to pick your real age..."
+    ]
+};
+
+function handleGoofAnswer(type) {
+    const sassyElement = document.getElementById('sassy-response');
+    sassyElement.textContent = sassyResponses[type][Math.min(goofCount, 1)];
+    sassyElement.classList.remove('hidden');
+    
+    goofCount++;
+    
+    if (goofCount >= 2) {
+        // Hide goof answers and show real age options
+        document.querySelectorAll('.goof-answer').forEach(btn => btn.style.display = 'none');
+        document.querySelectorAll('.real-answer').forEach(btn => btn.classList.remove('hidden'));
+    }
+}
+
+function selectAge(ageGroup) {
+    // Handle the actual age selection
+    // You can add logic here to redirect to the appropriate game version
+    console.log(`Selected age group: ${ageGroup}`);
+    // Add your age selection logic here
 } 

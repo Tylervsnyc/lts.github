@@ -591,6 +591,8 @@ body {
     width: 100%;
     max-height: 200px;
     object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .age-select-box {
@@ -663,4 +665,15 @@ body {
 
 .hidden {
     display: none;
+}
+
+.sassy-text {
+    color: #333;
+    font-size: 1.2em;
+    margin: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
 } 

@@ -305,8 +305,8 @@ body {
 /* Individual lightbulb style */
 .lightbulb {
     position: absolute;
-    width: 12px;  /* Slightly smaller bulbs */
-    height: 12px;
+    width: 10px;  /* Made bulbs slightly smaller */
+    height: 10px;
     background: #fff;
     border-radius: 50%;
     box-shadow: 

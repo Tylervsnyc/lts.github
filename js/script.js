@@ -4,15 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (container) {  // Only run this code on pages with lightbulb container
         const title = document.querySelector('.watercolor-text');
         const titleBox = title.getBoundingClientRect();
-        const padding = 10; // Smaller padding for tighter border
-        
-        // Get the title's golden frame for positioning
-        const frame = title.querySelector('::before') || title;
-        const frameRect = frame.getBoundingClientRect();
+        const padding = 15; // Space from the inner edge of the golden border
         
         // Number of bulbs for each side (adjusted for rectangle shape)
-        const horizontalBulbs = 30; // More bulbs for longer sides
-        const verticalBulbs = 15;   // Fewer bulbs for shorter sides
+        const horizontalBulbs = 25; // Slightly fewer bulbs for inner border
+        const verticalBulbs = 12;
         
         // Create top and bottom rows
         for (let i = 0; i < horizontalBulbs * 2; i++) {
@@ -20,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
             bulb.className = 'lightbulb';
             
             const progress = i / horizontalBulbs;
-            const x = progress * titleBox.width - padding;
-            const y = i < horizontalBulbs ? -padding : titleBox.height + padding;
+            // Position bulbs inside the golden border
+            const x = padding + (progress * (titleBox.width - (padding * 2)));
+            const y = i < horizontalBulbs ? padding : titleBox.height - padding;
             
             bulb.style.left = `${x}px`;
             bulb.style.top = `${y}px`;
@@ -36,8 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
             bulb.className = 'lightbulb';
             
             const progress = i / verticalBulbs;
-            const y = progress * titleBox.height;
-            const x = i < verticalBulbs ? -padding : titleBox.width + padding;
+            // Position bulbs inside the golden border
+            const y = padding + (progress * (titleBox.height - (padding * 2)));
+            const x = i < verticalBulbs ? padding : titleBox.width - padding;
             
             bulb.style.left = `${x}px`;
             bulb.style.top = `${y}px`;

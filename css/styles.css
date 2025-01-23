@@ -676,4 +676,48 @@ body {
     border-radius: 10px;
     text-align: center;
     font-style: italic;
+}
+
+/* Add bulb flashing animation */
+@keyframes bulbFlash {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #f7d547,
+            0 0 40px #f7d547;
+    }
+    50% {
+        opacity: 0.5;
+        box-shadow: 
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px #f7d547,
+            0 0 20px #f7d547;
+    }
+}
+
+/* Age selection specific styles */
+.age-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 400px;
+}
+
+.age-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.goof-answer {
+    background: linear-gradient(45deg, #ff9a9a, #ffd700);
+}
+
+.real-answer {
+    background: linear-gradient(45deg, #4ECDC4, #7ed8d3);
 } 

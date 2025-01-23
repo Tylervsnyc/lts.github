@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get parameters from URL
     const params = new URLSearchParams(window.location.search);
     const name = decodeURIComponent(params.get('name') || '');
-    const age = decodeURIComponent(params.get('age') || '');
+    const age = decodeURIComponent(params.get('age') || '').replace(/[^0-9]/g, ''); // Only keep numbers
     const chapter = params.get('chapter') || '';
 
     // Update certificate fields

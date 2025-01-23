@@ -37,12 +37,35 @@ function showWelcomeMessage(message) {
     quizContainer.innerHTML = `
         <div class="welcome-message">
             <p>${message}</p>
-            <button class="choice-button" onclick="startQuiz()">Begin Quiz</button>
+            <div class="name-input-container">
+                <label for="student-name">What's your first name?</label>
+                <input 
+                    type="text" 
+                    id="student-name" 
+                    placeholder="Enter your first name"
+                    onkeyup="checkNameInput()"
+                >
+            </div>
+            <button class="choice-button" id="start-button" onclick="startQuiz()" disabled>
+                Begin Quiz
+            </button>
         </div>
     `;
 }
 
+function checkNameInput() {
+    const nameInput = document.getElementById('student-name');
+    const startButton = document.getElementById('start-button');
+    studentName = nameInput.value.trim();
+    startButton.disabled = !studentName;
+}
+
 function startQuiz() {
+    studentName = document.getElementById('student-name').value.trim();
+    if (!studentName) {
+        alert('Please enter your first name before starting the quiz!');
+        return;
+    }
     showQuestion();
     updateProgress();
 }

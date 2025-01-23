@@ -1000,7 +1000,7 @@ body {
 
 #certificate-name {
     position: absolute;
-    top: 65%;  /* Adjusted to be below the images */
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.8rem;
@@ -1012,16 +1012,16 @@ body {
 
 #certificate-age {
     position: absolute;
-    top: 45%;  /* Aligned with "Age:" text */
-    left: 32%;  /* Positioned after "Age:" */
+    top: 36%;  /* Aligned with "Age:" text */
+    left: 27%;  /* Just after "Age:" */
     font-size: 1.5rem;
     font-family: 'Georgia', serif;
 }
 
 #certificate-chapter {
     position: absolute;
-    top: 45%;  /* Aligned with "Chapter:" text */
-    left: 65%;  /* Positioned after "Chapter:" */
+    top: 36%;  /* Aligned with "Chapter:" text */
+    left: 60%;  /* Just after "Chapter:" */
     font-size: 1.5rem;
     font-family: 'Georgia', serif;
 }
@@ -1054,5 +1054,38 @@ body {
 
 .certificate-download-btn:disabled:hover {
     transform: translateX(-50%); /* Don't scale when disabled */
+    box-shadow: none;
+}
+
+.name-input-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.name-input-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #003087;
+}
+
+#student-name {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid #003087;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+#start-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #ccc;
+}
+
+#start-button:disabled:hover {
+    transform: none;
     box-shadow: none;
 } 

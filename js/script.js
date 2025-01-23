@@ -52,32 +52,32 @@ document.addEventListener('DOMContentLoaded', function() {
 let goofCount = 0;
 const sassyResponses = {
     baby: [
-        "Wow, a typing baby! Next you'll tell me you can do calculus...",
-        "Still claiming to be a baby? Let's try picking your real age this time..."
+        "Really? You can type? That's impressive for someone who just said WAH-WAH!",
+        "Okay tiny human, let's try picking your real age this time..."
     ],
     ship: [
         "Last time I checked, wooden ships don't have fingers to click buttons...",
-        "Okay Captain, time to drop anchor and pick your actual age..."
+        "Alright Captain, time to drop anchor and pick your actual age..."
     ]
 };
 
-function handleAgeSelection(button, selection) {
-    // Check if it's a goof answer
-    if (selection === 'baby' || selection === 'ship') {
-        const sassyElement = document.getElementById('sassy-response');
-        sassyElement.textContent = sassyResponses[selection][Math.min(goofCount, 1)];
-        sassyElement.classList.remove('hidden');
-        goofCount++;
-        
-        if (goofCount >= 2) {
-            // Just disable the clicked goof button
-            button.disabled = true;
-            button.style.opacity = '0.5';
-        }
-    } else {
-        // Handle real age selection
-        console.log(`Selected age: ${selection}`);
-        // Add your age selection logic here
-        // This could be navigation to the next page or starting the game
+function handleGoofAnswer(type) {
+    const sassyElement = document.getElementById('sassy-response');
+    sassyElement.textContent = sassyResponses[type][Math.min(goofCount, 1)];
+    sassyElement.classList.remove('hidden');
+    
+    goofCount++;
+    
+    if (goofCount >= 2) {
+        // Remove both goof answers from the screen
+        document.querySelectorAll('.goof-answer').forEach(btn => {
+            btn.style.display = 'none';
+        });
     }
+}
+
+function selectAge(ageGroup) {
+    // Handle the actual age selection
+    console.log(`Selected age group: ${ageGroup}`);
+    // Add your age selection logic here
 } 

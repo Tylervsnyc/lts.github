@@ -1133,4 +1133,83 @@ body {
 #start-button:not(:disabled):hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+
+/* Quiz Progress Tracker */
+.progress-tracker {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+}
+
+.tracker-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.tracker-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 60px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #003087;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-size: 0.8rem;
+    color: #003087;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ccc;
+    z-index: 1;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #003087;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+/* Active and Completed States */
+.tracker-step.active .step-number {
+    background: #e31837;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(227, 24, 55, 0.3);
+}
+
+.tracker-step.completed .step-number {
+    background: #4CAF50;
+}
+
+.tracker-step.completed .step-label {
+    color: #4CAF50;
 } 

@@ -73,8 +73,32 @@ function startQuiz() {
 function showQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const quizContainer = document.getElementById('quiz-container');
+    const progress = ((currentQuestionIndex) / currentQuestions.length) * 100;
     
     quizContainer.innerHTML = `
+        <div class="progress-tracker">
+            <div class="tracker-steps">
+                <div class="tracker-step ${currentQuestionIndex >= 0 ? 'completed' : ''} ${currentQuestionIndex === 0 ? 'active' : ''}">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Start</div>
+                </div>
+                <div class="tracker-step ${currentQuestionIndex >= 3 ? 'completed' : ''} ${currentQuestionIndex === 3 ? 'active' : ''}">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Halfway</div>
+                </div>
+                <div class="tracker-step ${currentQuestionIndex >= 6 ? 'completed' : ''} ${currentQuestionIndex === 6 ? 'active' : ''}">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Almost</div>
+                </div>
+                <div class="tracker-step ${currentQuestionIndex >= currentQuestions.length ? 'completed' : ''} ${currentQuestionIndex === currentQuestions.length - 1 ? 'active' : ''}">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Complete</div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: ${progress}%"></div>
+            </div>
+        </div>
         <div class="question-container">
             <p class="question-text">${question.question}</p>
             <div class="choices-container">
@@ -83,9 +107,6 @@ function showQuestion() {
                 `).join('')}
             </div>
             <div id="feedback" class="feedback-container"></div>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: ${(currentQuestionIndex / currentQuestions.length) * 100}%"></div>
         </div>
         <div class="score-display">Score: ${score}/${currentQuestionIndex}</div>
     `;

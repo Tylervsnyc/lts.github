@@ -1,49 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Lightbulb generation for main page
-    const container = document.querySelector('.lightbulb-container');
-    if (container) {  // Only run this code on pages with lightbulb container
-        const title = document.querySelector('.watercolor-text');
-        const titleRect = title.getBoundingClientRect();
-        const padding = 5; // Tight padding around the sign
+    const border = document.querySelector('.lightbulb-border');
+    if (border) {
+        const title = document.querySelector('.quiz-title');
+        const rect = title.getBoundingClientRect();
         
-        // Calculate positions relative to the title element
-        const top = titleRect.top;
-        const left = titleRect.left;
-        const width = titleRect.width;
-        const height = titleRect.height;
+        // Configuration
+        const bulbSpacing = 20; // Space between bulbs
+        const padding = 10;     // Space from title edge
         
-        // Number of bulbs for each side
-        const horizontalBulbs = 30;
-        const verticalBulbs = 15;
+        // Calculate number of bulbs needed
+        const horizontalBulbs = Math.floor(rect.width / bulbSpacing);
+        const verticalBulbs = Math.floor(rect.height / bulbSpacing);
         
-        // Create bulbs for top and bottom edges
-        for (let i = 0; i < horizontalBulbs; i++) {
-            // Top edge bulb
-            const topBulb = createBulb();
-            topBulb.style.left = `${left + (width * i / horizontalBulbs)}px`;
-            topBulb.style.top = `${top + padding}px`;
-            container.appendChild(topBulb);
+        // Create top and bottom rows
+        for (let i = 0; i <= horizontalBulbs; i++) {
+            // Top bulb
+            createBulb(border, {
+                left: `${(i * bulbSpacing) + padding}px`,
+                top: `${padding}px`
+            });
             
-            // Bottom edge bulb
-            const bottomBulb = createBulb();
-            bottomBulb.style.left = `${left + (width * i / horizontalBulbs)}px`;
-            bottomBulb.style.top = `${top + height - padding}px`;
-            container.appendChild(bottomBulb);
+            // Bottom bulb
+            createBulb(border, {
+                left: `${(i * bulbSpacing) + padding}px`,
+                top: `${rect.height - padding}px`
+            });
         }
         
-        // Create bulbs for left and right edges
-        for (let i = 0; i < verticalBulbs; i++) {
-            // Left edge bulb
-            const leftBulb = createBulb();
-            leftBulb.style.left = `${left + padding}px`;
-            leftBulb.style.top = `${top + (height * i / verticalBulbs)}px`;
-            container.appendChild(leftBulb);
+        // Create left and right columns
+        for (let i = 1; i < verticalBulbs; i++) {
+            // Left bulb
+            createBulb(border, {
+                left: `${padding}px`,
+                top: `${(i * bulbSpacing) + padding}px`
+            });
             
-            // Right edge bulb
-            const rightBulb = createBulb();
-            rightBulb.style.left = `${left + width - padding}px`;
-            rightBulb.style.top = `${top + (height * i / verticalBulbs)}px`;
-            container.appendChild(rightBulb);
+            // Right bulb
+            createBulb(border, {
+                left: `${rect.width - padding}px`,
+                top: `${(i * bulbSpacing) + padding}px`
+            });
         }
     }
 
@@ -56,10 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function createBulb() {
+function createBulb(container, position) {
     const bulb = document.createElement('div');
     bulb.className = 'lightbulb';
+    Object.assign(bulb.style, position);
     bulb.style.animationDelay = `${Math.random() * 0.5}s`;
+    container.appendChild(bulb);
     return bulb;
 }
 

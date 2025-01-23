@@ -911,4 +911,44 @@ body {
 .certificate-button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+
+.quiz-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.quiz-title {
+    /* Keep existing watercolor-text styles */
+    position: relative;
+    z-index: 2;
+}
+
+.lightbulb-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.lightbulb {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #FFD700,
+        0 0 40px #FFD700;
+    animation: priceIsRightBulb 0.5s ease-in-out infinite alternate;
 } 

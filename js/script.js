@@ -3,45 +3,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.lightbulb-container');
     if (container) {  // Only run this code on pages with lightbulb container
         const title = document.querySelector('.watercolor-text');
-        const titleBox = title.getBoundingClientRect();
-        const padding = 15; // Space from the inner edge of the golden border
+        const titleRect = title.getBoundingClientRect();
+        const padding = 5; // Tight padding around the sign
         
-        // Number of bulbs for each side (adjusted for rectangle shape)
-        const horizontalBulbs = 25; // Slightly fewer bulbs for inner border
-        const verticalBulbs = 12;
+        // Calculate positions relative to the title element
+        const top = titleRect.top;
+        const left = titleRect.left;
+        const width = titleRect.width;
+        const height = titleRect.height;
         
-        // Create top and bottom rows
-        for (let i = 0; i < horizontalBulbs * 2; i++) {
-            const bulb = document.createElement('div');
-            bulb.className = 'lightbulb';
+        // Number of bulbs for each side
+        const horizontalBulbs = 30;
+        const verticalBulbs = 15;
+        
+        // Create bulbs for top and bottom edges
+        for (let i = 0; i < horizontalBulbs; i++) {
+            // Top edge bulb
+            const topBulb = createBulb();
+            topBulb.style.left = `${left + (width * i / horizontalBulbs)}px`;
+            topBulb.style.top = `${top + padding}px`;
+            container.appendChild(topBulb);
             
-            const progress = i / horizontalBulbs;
-            // Position bulbs inside the golden border
-            const x = padding + (progress * (titleBox.width - (padding * 2)));
-            const y = i < horizontalBulbs ? padding : titleBox.height - padding;
-            
-            bulb.style.left = `${x}px`;
-            bulb.style.top = `${y}px`;
-            bulb.style.animationDelay = `${Math.random() * 0.5}s`;
-            
-            container.appendChild(bulb);
+            // Bottom edge bulb
+            const bottomBulb = createBulb();
+            bottomBulb.style.left = `${left + (width * i / horizontalBulbs)}px`;
+            bottomBulb.style.top = `${top + height - padding}px`;
+            container.appendChild(bottomBulb);
         }
         
-        // Create left and right columns
-        for (let i = 0; i < verticalBulbs * 2; i++) {
-            const bulb = document.createElement('div');
-            bulb.className = 'lightbulb';
+        // Create bulbs for left and right edges
+        for (let i = 0; i < verticalBulbs; i++) {
+            // Left edge bulb
+            const leftBulb = createBulb();
+            leftBulb.style.left = `${left + padding}px`;
+            leftBulb.style.top = `${top + (height * i / verticalBulbs)}px`;
+            container.appendChild(leftBulb);
             
-            const progress = i / verticalBulbs;
-            // Position bulbs inside the golden border
-            const y = padding + (progress * (titleBox.height - (padding * 2)));
-            const x = i < verticalBulbs ? padding : titleBox.width - padding;
-            
-            bulb.style.left = `${x}px`;
-            bulb.style.top = `${y}px`;
-            bulb.style.animationDelay = `${Math.random() * 0.5}s`;
-            
-            container.appendChild(bulb);
+            // Right edge bulb
+            const rightBulb = createBulb();
+            rightBulb.style.left = `${left + width - padding}px`;
+            rightBulb.style.top = `${top + (height * i / verticalBulbs)}px`;
+            container.appendChild(rightBulb);
         }
     }
 
@@ -53,6 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function createBulb() {
+    const bulb = document.createElement('div');
+    bulb.className = 'lightbulb';
+    bulb.style.animationDelay = `${Math.random() * 0.5}s`;
+    return bulb;
+}
 
 // Age selection page logic
 let goofCount = 0;

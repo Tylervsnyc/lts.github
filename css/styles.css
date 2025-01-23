@@ -293,7 +293,7 @@ body {
 
 /* Container for the lightbulbs */
 .lightbulb-container {
-    position: absolute;
+    position: fixed;  /* Changed to fixed to maintain position */
     top: 0;
     left: 0;
     width: 100%;
@@ -305,8 +305,8 @@ body {
 /* Individual lightbulb style */
 .lightbulb {
     position: absolute;
-    width: 10px;  /* Made bulbs slightly smaller */
-    height: 10px;
+    width: 8px;  /* Made bulbs slightly smaller */
+    height: 8px;
     background: #fff;
     border-radius: 50%;
     box-shadow: 

@@ -70,7 +70,7 @@ function startQuiz() {
 function showQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const quizContainer = document.getElementById('quiz-container');
-    const progress = ((currentQuestionIndex) / currentQuestions.length) * 100;
+    const progress = ((currentQuestionIndex) / 10) * 100;  // Always 10 questions
     
     quizContainer.innerHTML = `
         <div class="progress-tracker">
@@ -80,16 +80,16 @@ function showQuestion() {
                     <div class="step-label">Start</div>
                 </div>
                 <div class="tracker-step ${currentQuestionIndex >= 3 ? 'completed' : ''} ${currentQuestionIndex === 3 ? 'active' : ''}">
-                    <div class="step-number">2</div>
-                    <div class="step-label">Halfway</div>
+                    <div class="step-number">4</div>
+                    <div class="step-label">Getting There</div>
                 </div>
                 <div class="tracker-step ${currentQuestionIndex >= 6 ? 'completed' : ''} ${currentQuestionIndex === 6 ? 'active' : ''}">
-                    <div class="step-number">3</div>
-                    <div class="step-label">Almost</div>
+                    <div class="step-number">7</div>
+                    <div class="step-label">Almost Done</div>
                 </div>
-                <div class="tracker-step ${currentQuestionIndex >= currentQuestions.length ? 'completed' : ''} ${currentQuestionIndex === currentQuestions.length - 1 ? 'active' : ''}">
-                    <div class="step-number">4</div>
-                    <div class="step-label">Complete</div>
+                <div class="tracker-step ${currentQuestionIndex >= 9 ? 'completed' : ''} ${currentQuestionIndex === 9 ? 'active' : ''}">
+                    <div class="step-number">10</div>
+                    <div class="step-label">Final Question</div>
                 </div>
             </div>
             <div class="progress-bar">

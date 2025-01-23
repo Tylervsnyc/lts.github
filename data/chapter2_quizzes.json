@@ -170,11 +170,11 @@
           "incorrect_response": "Paws at calculator Try $10 times 3 again!"
         },
         {
-          "question": "***Flicks tail thoughtfully*** How much did Hudson spend on his flyers?",
-          "choices": ["$2", "$3", "$4", "$5"],
-          "correct_answer": "$3",
-          "correct_response": "Yes, those paper things weren't cheap!",
-          "incorrect_response": "Rolls eyes Check the expense report again!"
+          "question": "***Flicks tail thoughtfully*** How many days will Hudson watch ants this week?",
+          "choices": ["2", "3", "4", "5"],
+          "correct_answer": "3",
+          "correct_response": "Yes! Though I still don't understand why anyone would watch ants!",
+          "incorrect_response": "Rolls eyes Count those ant-watching days again!"
         },
         {
           "question": "***Perks ears up*** If Hudson watches ants for 3 days at $5 per day, how much money will he make?",
@@ -224,13 +224,6 @@
           "correct_answer": "$72",
           "correct_response": "Meow-velous! Though I still think he should spend it all on a golden cat bed for yours truly...",
           "incorrect_response": "Scatters money everywhere Add last week's $10 to this week's $62 again, unless you're distracted by my magnificent tail!"
-        },
-        {
-          "question": "***Flicks tail thoughtfully*** How many days will Hudson watch ants this week?",
-          "choices": ["2", "3", "4", "5"],
-          "correct_answer": "3",
-          "correct_response": "Yes! Though I still don't understand why anyone would watch ants!",
-          "incorrect_response": "Rolls eyes Count those ant-watching days again!"
         }
       ]
     }

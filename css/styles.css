@@ -968,61 +968,37 @@ body {
 /* Certificate styles */
 .certificate {
     position: relative;
-    width: 800px;
-    height: auto;
-    margin: 2rem auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.2);
-    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-#certificate-image {
+.certificate img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Georgia', serif;
-    color: #000;  /* Changed to black to match certificate */
-}
-
-#certificate-title {
-    /* Remove this since it's part of the image */
-    display: none;
-}
-
-#certificate-name {
-    position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+#certificate-name, #certificate-age, #certificate-chapter {
+    margin: 10px 0;
     font-size: 1.8rem;
     font-weight: bold;
     font-family: 'Georgia', serif;
     color: #000;
 }
 
-#certificate-age {
-    position: absolute;
-    top: 33%;  /* Updated position */
-    left: 37%;  /* Updated position */
-    font-size: 1.5rem;
-    font-family: 'Georgia', serif;
-}
-
-#certificate-chapter {
-    position: absolute;
-    top: 33%;  /* Updated position */
-    left: 53%;  /* Updated position */
-    font-size: 1.5rem;
-    font-family: 'Georgia', serif;
+.student-value {
+    display: inline-block;
+    margin-left: 10px;
+    color: #003087;  /* Price is Right blue */
 }
 
 .certificate-download-btn {

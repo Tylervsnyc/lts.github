@@ -39,11 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get parameters from URL
     const params = new URLSearchParams(window.location.search);
     const name = decodeURIComponent(params.get('name') || '');
-    const age = decodeURIComponent(params.get('age') || '').replace(/[^0-9]/g, ''); // Only keep numbers
+    const age = decodeURIComponent(params.get('age') || '');
     const chapter = params.get('chapter') || '';
 
     // Update certificate fields
-    if (name) document.getElementById('certificate-name').textContent = name;
-    if (age) document.getElementById('certificate-age').textContent = age;
-    if (chapter) document.getElementById('certificate-chapter').textContent = chapter;
+    document.querySelector('#certificate-name .student-value').textContent = name;
+    document.querySelector('#certificate-age .student-value').textContent = age;
+    document.querySelector('#certificate-chapter .student-value').textContent = chapter;
 }); 

@@ -14,15 +14,23 @@
         <div class="splash splash4"></div>
         <div class="splash splash5"></div>
         <main class="container">
-            <div id="certificate-container" class="certificate">
-                <img src="assets/cert.jpg" alt="Certificate" id="certificate-image">
-                <div class="overlay">
-                    <h2 id="certificate-title">You're Smarter Than Mr. Fluffbutt</h2>
-                    <p id="certificate-age">Age: <span id="student-age">___</span></p>
-                    <p id="certificate-chapter">Chapter: <span id="chapter-number">___</span></p>
-                    <p id="certificate-name">Awarded to: <span id="student-name">___</span></p>
+            <div class="certificate-container">
+                <div class="certificate">
+                    <img id="certificate-image" src="assets/cert.jpg" alt="Certificate">
+                    <div class="overlay">
+                        <div id="certificate-name"></div>
+                        <div id="certificate-age"></div>
+                        <div id="certificate-chapter"></div>
+                    </div>
                 </div>
-                <button class="certificate-download-btn" onclick="downloadCertificate()">Download Certificate</button>
+                <div class="certificate-buttons">
+                    <button class="certificate-download-btn" onclick="downloadCertificate()">
+                        Download Certificate
+                    </button>
+                    <button class="return-home-btn" onclick="window.location.href='index.html'">
+                        Return Home
+                    </button>
+                </div>
             </div>
         </main>
     </div>

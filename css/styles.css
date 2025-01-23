@@ -229,8 +229,7 @@ body {
 .watercolor-text {
     font-size: 3.5rem;
     color: #fff;
-    margin: 0;
-    position: relative;
+    margin: 40px auto;
     padding: 40px;
     background: #003087; /* Price is Right blue */
     border: none;
@@ -242,6 +241,8 @@ body {
         0 0 10px rgba(255,255,255,0.3);
     transform: perspective(500px) rotateX(5deg);
     animation: titleFlash 2s infinite;
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes titleFlash {
@@ -293,10 +294,10 @@ body {
 /* Container for the lightbulbs */
 .lightbulb-container {
     position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     pointer-events: none;
     z-index: 2;
 }
@@ -304,8 +305,8 @@ body {
 /* Individual lightbulb style */
 .lightbulb {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: #fff;
     border-radius: 50%;
     box-shadow: 

@@ -2,37 +2,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lightbulb generation for main page
     const container = document.querySelector('.lightbulb-container');
     if (container) {  // Only run this code on pages with lightbulb container
-        const numBulbs = 60; // Increased for better coverage
         const title = document.querySelector('.watercolor-text');
-        const rect = title.getBoundingClientRect();
+        const titleRect = title.getBoundingClientRect();
+        const padding = 20; // Space between title and lights
         
-        // Create bulbs for top and bottom
-        for (let i = 0; i < numBulbs/2; i++) {
+        // Number of bulbs for each side
+        const topBulbs = 20;
+        const sideBulbs = 12;
+        
+        // Create top and bottom rows
+        for (let i = 0; i < topBulbs * 2; i++) {
             const bulb = document.createElement('div');
             bulb.className = 'lightbulb';
             
-            // Position horizontally along top or bottom
-            const x = (i / (numBulbs/4)) * 100;
-            const y = i < numBulbs/4 ? -10 : 110; // -10 for top, 110 for bottom
+            // Calculate position
+            const x = (i / topBulbs) * 100;
+            // If in first half, place on top, else place on bottom
+            const y = i < topBulbs ? -padding : 100 + padding;
             
             bulb.style.left = `${x}%`;
-            bulb.style.top = `${y}%`;
+            bulb.style.top = `${y}px`;
             bulb.style.animationDelay = `${Math.random() * 0.5}s`;
             
             container.appendChild(bulb);
         }
         
-        // Create bulbs for left and right sides
-        for (let i = 0; i < numBulbs/2; i++) {
+        // Create left and right columns
+        for (let i = 0; i < sideBulbs * 2; i++) {
             const bulb = document.createElement('div');
             bulb.className = 'lightbulb';
             
-            // Position vertically along left or right
-            const y = (i / (numBulbs/4)) * 100;
-            const x = i < numBulbs/4 ? -10 : 110; // -10 for left, 110 for right
+            // Calculate position
+            const y = ((i / sideBulbs) * 100) + padding; // Add padding to align with top/bottom rows
+            // If in first half, place on left, else place on right
+            const x = i < sideBulbs ? -padding : 100 + padding;
             
-            bulb.style.left = `${x}%`;
-            bulb.style.top = `${y}%`;
+            bulb.style.left = `${x}px`;
+            bulb.style.top = `${y}px`;
             bulb.style.animationDelay = `${Math.random() * 0.5}s`;
             
             container.appendChild(bulb);

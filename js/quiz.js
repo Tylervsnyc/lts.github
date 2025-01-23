@@ -18,9 +18,6 @@ async function loadQuizData() {
         const data = await response.json();
         userAge = getSelectedAge();
         
-        // Get student name (you might want to prompt for this at quiz start)
-        studentName = prompt("Before we begin, what's your name?", "");
-        
         if (userAge && data.age_groups[userAge]) {
             currentQuestions = data.age_groups[userAge].questions;
             showWelcomeMessage(data.age_groups[userAge].opening_message);
@@ -36,15 +33,18 @@ function showWelcomeMessage(message) {
     const quizContainer = document.getElementById('quiz-container');
     quizContainer.innerHTML = `
         <div class="welcome-message">
-            <p>${message}</p>
+            <p class="fluffbutt-message">${message}</p>
             <div class="name-input-container">
-                <label for="student-name">What's your first name?</label>
-                <input 
-                    type="text" 
-                    id="student-name" 
-                    placeholder="Enter your first name"
-                    onkeyup="checkNameInput()"
-                >
+                <div class="input-wrapper">
+                    <label for="student-name">What's your first name, young entrepreneur?</label>
+                    <input 
+                        type="text" 
+                        id="student-name" 
+                        placeholder="Enter your first name"
+                        onkeyup="checkNameInput()"
+                        maxlength="20"
+                    >
+                </div>
             </div>
             <button class="choice-button" id="start-button" onclick="startQuiz()" disabled>
                 Begin Quiz

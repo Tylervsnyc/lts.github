@@ -1327,32 +1327,37 @@ body {
 }
 
 .return-home-btn {
-    background: linear-gradient(45deg, #4ECDC4, #7ed8d3);  /* Teal gradient */
-    box-shadow: 0 4px 15px rgba(78,205,196,0.2);
-}
-
-.certificate-download-btn:hover, .return-home-btn:hover {
-    transform: scale(1.05);
-}
-
-.certificate-download-btn:hover {
-    box-shadow: 0 0 20px rgba(255,215,0,0.4);
-    background: linear-gradient(45deg, #FFA500, #FFD700);
+    margin-top: 2rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D, #4ECDC4, #6C63FF);
+    background-size: 300% 300%;
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    animation: gradientShift 3s ease infinite;
 }
 
 .return-home-btn:hover {
-    box-shadow: 0 0 20px rgba(78,205,196,0.4);
-    background: linear-gradient(45deg, #7ed8d3, #4ECDC4);
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border-color: #FFD700;
+    animation: gradientShift 1.5s ease infinite;
 }
 
-.certificate-download-btn:disabled {
-    background: linear-gradient(45deg, #ccc, #999);
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-.certificate-download-btn:disabled:hover {
-    transform: none;
-    box-shadow: none;
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 } 

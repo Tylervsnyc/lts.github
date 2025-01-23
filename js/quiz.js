@@ -3,6 +3,7 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let userAge = '';
+let studentName = '';
 
 // Get age from URL parameter
 function getSelectedAge() {
@@ -16,6 +17,9 @@ async function loadQuizData() {
         const response = await fetch('./data/chapter2_quizzes.json');
         const data = await response.json();
         userAge = getSelectedAge();
+        
+        // Get student name (you might want to prompt for this at quiz start)
+        studentName = prompt("Before we begin, what's your name?", "");
         
         if (userAge && data.age_groups[userAge]) {
             currentQuestions = data.age_groups[userAge].questions;
@@ -123,8 +127,8 @@ function showReportCard() {
 }
 
 function generateCertificate() {
-    // Certificate generation logic will go here
-    console.log('Generating certificate...');
+    // Navigate to certificate page with parameters
+    window.location.href = `certificate.html?name=${encodeURIComponent(studentName)}&age=${encodeURIComponent(userAge)}&chapter=2`;
 }
 
 // Initialize quiz when page loads

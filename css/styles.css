@@ -1045,4 +1045,14 @@ body {
 .certificate-download-btn:hover {
     transform: translateX(-50%) scale(1.05);
     box-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+
+.certificate-download-btn:disabled {
+    cursor: not-allowed;
+    background: linear-gradient(45deg, #ccc, #999);
+}
+
+.certificate-download-btn:disabled:hover {
+    transform: translateX(-50%); /* Don't scale when disabled */
+    box-shadow: none;
 } 

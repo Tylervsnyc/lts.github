@@ -990,48 +990,40 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Georgia', serif;
-    color: #003087;
+    color: #000;  /* Changed to black to match certificate */
 }
 
 #certificate-title {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    font-family: 'Impact', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    width: 80%;
-    text-align: center;
+    /* Remove this since it's part of the image */
+    display: none;
 }
 
 #certificate-name {
     position: absolute;
-    top: 50%;
+    top: 65%;  /* Adjusted to be below the images */
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     width: 80%;
     text-align: center;
+    font-family: 'Georgia', serif;
 }
 
 #certificate-age {
     position: absolute;
-    bottom: 30%;
-    left: 35%;
-    transform: translate(-50%, 0);
+    top: 45%;  /* Aligned with "Age:" text */
+    left: 32%;  /* Positioned after "Age:" */
     font-size: 1.5rem;
+    font-family: 'Georgia', serif;
 }
 
 #certificate-chapter {
     position: absolute;
-    bottom: 30%;
-    right: 25%;
-    transform: translate(0, 0);
+    top: 45%;  /* Aligned with "Chapter:" text */
+    left: 65%;  /* Positioned after "Chapter:" */
     font-size: 1.5rem;
+    font-family: 'Georgia', serif;
 }
 
 .certificate-download-btn {

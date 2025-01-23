@@ -89,10 +89,4 @@ function handleGoofAnswer(type) {
             btn.style.display = 'none';
         });
     }
-}
-
-function selectAge(ageGroup) {
-    // Handle the actual age selection
-    console.log(`Selected age group: ${ageGroup}`);
-    // Add your age selection logic here
 } 

@@ -764,4 +764,151 @@ body {
 .back-button-container {
     margin-top: 2rem;
     text-align: center;
+}
+
+/* Quiz page specific styles */
+.quiz-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 
+        0 0 20px rgba(0,0,0,0.1),
+        inset 0 0 15px rgba(0,0,0,0.1);
+}
+
+.question-container {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #003087;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid #FFD700;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.question-text {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.choices-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.choice-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #4ECDC4, #7ed8d3);
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.choice-button:hover {
+    transform: scale(1.02);
+    background: linear-gradient(45deg, #7ed8d3, #4ECDC4);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    border-color: #FFD700;
+}
+
+.feedback-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-style: italic;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feedback-container.correct {
+    background: rgba(76, 175, 80, 0.2);
+    border: 2px solid #4CAF50;
+}
+
+.feedback-container.incorrect {
+    background: rgba(244, 67, 54, 0.2);
+    border: 2px solid #F44336;
+}
+
+.feedback-container.visible {
+    opacity: 1;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.score-display {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #003087;
+}
+
+/* Report card styles */
+.report-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 5px solid #FFD700;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.report-card h2 {
+    color: #003087;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.final-score {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin: 1rem 0;
+}
+
+.perfect-score-message {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.certificate-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.certificate-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,215,0,0.3);
 } 

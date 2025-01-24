@@ -1564,7 +1564,7 @@ body {
     }
 
     .lts-logo img {
-        width: 120px;  /* Smaller on mobile */
+        width: 100px;  /* Smaller on mobile */
     }
     
     .substack-image {
@@ -1573,10 +1573,11 @@ body {
     }
 }
 
+/* Base substack positioning */
 .substack-link {
     position: fixed;
     top: 20px;
-    right: 120px;
+    right: 200px;  /* Moved further left to avoid header.jpg */
     z-index: 100;
     display: block;
 }
@@ -1588,9 +1589,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: block;
     object-fit: cover;
-    animation: none !important;
-    transform: none !important;
-    transition: none !important;
 }
 
 /* Remove hover effects */
@@ -1604,5 +1602,29 @@ body {
         width: 100px;
         height: 100px;
         border-radius: 12px;
+    }
+}
+
+/* Quiz page specific adjustments */
+.quiz-content .lts-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.quiz-content .substack-link {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .substack-link {
+        right: 160px;
+    }
+    
+    .quiz-content .substack-link {
+        right: 10px;
     }
 } 

@@ -39,11 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get parameters from URL
     const params = new URLSearchParams(window.location.search);
     const name = decodeURIComponent(params.get('name') || '');
-    const age = decodeURIComponent(params.get('age') || '');
     const chapter = params.get('chapter') || '';
 
     // Update certificate fields
     document.getElementById('student-name').textContent = name;
-    document.getElementById('student-age').textContent = age;
     document.getElementById('chapter-number').textContent = chapter;
 }); 

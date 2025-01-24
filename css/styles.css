@@ -1184,7 +1184,7 @@ body {
 
 #student-name {
     padding: 0.8rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     border: 3px solid #FFD700;
     border-radius: 8px;
     width: 80%;
@@ -1205,7 +1205,7 @@ body {
 #student-name::placeholder {
     color: #666;
     opacity: 0.7;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 #start-button {
@@ -1277,7 +1277,7 @@ body {
 
 #student-name {
     padding: 0.8rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     border: 3px solid #FFD700;
     border-radius: 8px;
     width: 80%;
@@ -1299,7 +1299,7 @@ body {
 #student-name::placeholder {
     color: #666;
     opacity: 0.7;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 #start-button {

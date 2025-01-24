@@ -34,6 +34,15 @@ async function downloadCertificate() {
     }
 }
 
+// Add certificate tracking function
+function trackCertificate(username, chapter) {
+    gtag('event', 'certificate_issued', {
+        'user': username,
+        'chapter': chapter,
+        'age_group': params.get('age') || ''  // Also track age group
+    });
+}
+
 // Initialize certificate when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Get parameters from URL
@@ -44,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update certificate fields
     document.getElementById('student-name').textContent = name;
     document.getElementById('chapter-number').textContent = chapter;
+
+    // Track certificate generation
+    trackCertificate(name, chapter);
 
     // Force text positioning and ensure responsive width
     document.querySelectorAll('.certificate-text, .certificate-text-1, .certificate-text-2, .certificate-text-3').forEach(el => {

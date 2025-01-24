@@ -996,15 +996,17 @@ body {
     font-family: 'Georgia', serif;
     margin-bottom: 20px;
     text-align: center;
+    background: none;
+    border: none;
 }
 
 #student-name, #chapter-number {
     color: #003087;  /* Price is Right blue */
     font-weight: bold;
-    display: inline-block;
-    border: none;
     background: none;
-    padding: 0;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .certificate-download-btn {

@@ -110,10 +110,23 @@ function showQuestion() {
     `;
 }
 
+// Add tracking function at the top of the file
+function trackAnswer(questionId, isCorrect) {
+    gtag('event', 'quiz_answer', {
+        'question_id': questionId,
+        'correct': isCorrect ? 'yes' : 'no',
+        'age_group': userAge  // Track which age group is taking the quiz
+    });
+}
+
+// Update the handleAnswer function to include tracking
 function handleAnswer(selectedAnswer) {
     const question = currentQuestions[currentQuestionIndex];
     const feedback = document.getElementById('feedback');
     const isCorrect = selectedAnswer === question.correct_answer;
+    
+    // Track the answer
+    trackAnswer(`chapter2_q${currentQuestionIndex + 1}`, isCorrect);
     
     // Disable all buttons
     document.querySelectorAll('.choice-button').forEach(btn => btn.disabled = true);

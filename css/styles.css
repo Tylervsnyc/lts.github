@@ -1576,15 +1576,15 @@ body {
 .substack-link {
     position: fixed;
     top: 20px;
-    right: 80px;  /* Moved more towards center */
+    right: 120px;  /* Moved further towards center */
     z-index: 100;
     display: block;
 }
 
 .substack-image {
-    width: 100px;  /* Increased from 60px */
-    height: 100px;  /* Increased from 60px */
-    border-radius: 12px;  /* Less rounded corners instead of 50% */
+    width: 140px;  /* Made larger */
+    height: 140px;  /* Keep square aspect ratio */
+    border-radius: 15px;  /* Slightly rounded edges */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     animation: pulsate 2s infinite;
     display: block;
@@ -1616,8 +1616,8 @@ body {
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .substack-image {
-        width: 80px;  /* Larger on mobile too */
-        height: 80px;
-        border-radius: 8px;  /* Slightly less rounded on mobile */
+        width: 100px;  /* Still fairly large on mobile */
+        height: 100px;
+        border-radius: 12px;
     }
 } 

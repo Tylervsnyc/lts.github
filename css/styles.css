@@ -378,10 +378,10 @@ body {
 
 /* Update logo styling */
 .lts-logo {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    z-index: 1000;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
     transition: all 0.3s ease;
     background: none;
     opacity: 1;
@@ -1570,7 +1570,7 @@ body {
 
 .substack-link {
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     z-index: 100;
     transition: all 0.3s ease;
@@ -1579,7 +1579,7 @@ body {
 .substack-image {
     width: 60px;
     height: 60px;
-    border-radius: 50%;  /* Makes image circular */
+    border-radius: 50%;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     animation: pulsate 2s infinite;
 }

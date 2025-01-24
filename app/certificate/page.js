@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import html2canvas from 'html2canvas';
-import Header from '../components/Header';
 
 export default function Certificate() {
   const router = useRouter();
@@ -30,16 +29,14 @@ export default function Certificate() {
 
   return (
     <div className="watercolor-background">
-      <Header />
       <div className="container">
         <div className="certificate" ref={certificateRef}>
           <div className="certificate-text">
-            <div className="student-name">{name}</div>
-            <div className="certificate-details">
-              has completed Chapter <span className="chapter-number">1</span>
-              <br />
-              with a score of {score}/{total}!
-            </div>
+            <span id="student-name">{name}</span>
+            <br />
+            has completed Chapter <span id="chapter-number">1</span>
+            <br />
+            with a score of {score}/{total}!
           </div>
         </div>
 

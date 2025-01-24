@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Header from './components/Header';
 import styles from '../css/styles.css';
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
 
   return (
     <div className="watercolor-background">
-      <Header />
       <div className="container">
         <div className="title-container">
           <h1 className="watercolor-text">

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import Header from '../components/Header';
 
 export default function Quiz() {
   const router = useRouter();
@@ -23,7 +22,6 @@ export default function Quiz() {
 
   return (
     <div className="watercolor-background">
-      <Header />
       <div className="container">
         <div className="welcome-message">
           <div className="fluffbutt-message">

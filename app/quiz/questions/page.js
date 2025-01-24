@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import Header from '../../components/Header';
 
 export default function QuizQuestions() {
   const router = useRouter();
@@ -64,7 +63,6 @@ export default function QuizQuestions() {
 
   return (
     <div className="watercolor-background">
-      <Header />
       <div className="container">
         <div className="quiz-content">
           <div className="progress-tracker">

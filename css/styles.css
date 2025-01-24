@@ -1493,4 +1493,62 @@ body {
     .step-label {
         font-size: 0.6rem !important;
     }
+
+    /* 1️⃣ Homepage Fixes */
+    .dont-click, 
+    .dont-click-left,
+    .dont-click-right {
+        display: none !important;
+    }
+
+    /* 2️⃣ Age-Select Page Header Fix */
+    .header-image {
+        margin-top: 40px !important;
+        max-width: 90% !important;
+    }
+
+    /* 3️⃣ Quiz Name Entry Screen */
+    .quiz-intro,
+    .fluffbutt-message {
+        display: none !important;
+    }
+
+    .name-input {
+        white-space: normal !important;
+        text-align: center !important;
+        padding: 12px !important;
+        width: 90% !important;
+        margin: 1rem auto !important;
+        background: white !important;
+    }
+
+    #student-name {
+        width: 85% !important;
+        padding: 10px !important;
+        font-size: 16px !important;
+        margin: 0.5rem auto !important;
+        white-space: normal !important;
+    }
+
+    /* 4️⃣ Certificate Text Refinements */
+    .certificate-text {
+        width: 70% !important;  /* Narrower to fit between images */
+        font-size: 18px !important;  /* Smaller text */
+        text-align: center !important;
+        position: absolute !important;
+        top: 45% !important;  /* Align with golden line */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        padding: 5px !important;
+        white-space: nowrap !important;
+        background: rgba(255,255,255,0.1) !important;
+    }
+
+    #student-name {
+        font-size: 20px !important;  /* Slightly larger than chapter text */
+    }
+
+    #chapter-number {
+        font-size: 18px !important;
+    }
 } 

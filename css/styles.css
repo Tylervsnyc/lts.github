@@ -987,42 +987,43 @@ body {
 }
 
 .certificate-text {
-    position: absolute;
-    top: 40%;  /* Changed from 45% to 40% */
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute !important;
+    top: 40% !important;  /* Force text to 40% from top */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     text-align: center;
     white-space: nowrap;
     background: none !important;
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
+    z-index: 10 !important; /* Ensure text is on top */
 }
 
 /* Make the name bigger */
 #student-name {
-    font-family: 'Georgia', serif;
-    font-size: 40px;  /* Bigger size for the name */
-    font-weight: bold;
-    color: #003087;
+    font-family: 'Georgia', serif !important;
+    font-size: 40px !important;  /* Bigger size for the name */
+    font-weight: bold !important;
+    color: #003087 !important;
     background: none !important;
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
-    display: inline;
+    display: inline !important;
 }
 
 /* Slightly smaller text for "Chapter" and the number */
 .certificate-text, #chapter-number {
-    font-family: 'Georgia', serif;
-    font-size: 32px;  /* Smaller size for Chapter and number */
-    font-weight: normal;
-    color: #003087;
+    font-family: 'Georgia', serif !important;
+    font-size: 32px !important;  /* Smaller size for Chapter and number */
+    font-weight: normal !important;
+    color: #003087 !important;
     background: none !important;
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
-    display: inline;
+    display: inline !important;
 }
 
 /* Remove any potential input styling */

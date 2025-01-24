@@ -57,12 +57,25 @@ function checkNameInput() {
     startButton.disabled = !studentName;
 }
 
+// Add user entry tracking function
+function trackUserEntry(username, age) {
+    gtag('event', 'user_entry', {
+        'user': username,
+        'age': age
+    });
+}
+
+// Update startQuiz function to include tracking
 function startQuiz() {
     studentName = document.getElementById('student-name').value.trim();
     if (!studentName) {
         alert('Please enter your first name before starting the quiz!');
         return;
     }
+    
+    // Track user entry before starting quiz
+    trackUserEntry(studentName, userAge);
+    
     showQuestion();
     updateProgress();
 }

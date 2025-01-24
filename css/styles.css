@@ -996,17 +996,40 @@ body {
     font-family: 'Georgia', serif;
     margin-bottom: 20px;
     text-align: center;
-    background: none;
-    border: none;
+    background: none !important;
+    border: none !important;
 }
 
 #student-name, #chapter-number {
     color: #003087;  /* Price is Right blue */
     font-weight: bold;
-    background: none;
-    border: none;
-    box-shadow: none;
-    outline: none;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    cursor: default !important;
+}
+
+/* Remove any potential input styling */
+#student-name {
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+/* Ensure no hover effects */
+#student-name:hover,
+#student-name:focus,
+#student-name:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
 }
 
 .certificate-download-btn {

@@ -1585,14 +1585,17 @@ body {
     width: 140px;
     height: 140px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: block;
     object-fit: cover;
-    transition: transform 0.3s ease;  /* Only for hover scaling */
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
 }
 
+/* Remove hover effects */
 .substack-link:hover .substack-image {
-    transform: scale(1.05);  /* Subtle scale on hover */
+    transform: none !important;
 }
 
 /* Mobile adjustments */

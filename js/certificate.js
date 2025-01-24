@@ -45,8 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('student-name').textContent = name;
     document.getElementById('chapter-number').textContent = chapter;
 
-    // Force text positioning
+    // Force text positioning and ensure responsive width
     document.querySelectorAll('.certificate-text, .certificate-text-1, .certificate-text-2, .certificate-text-3').forEach(el => {
+        el.style.removeProperty('width');  // Remove any fixed width
+        el.style.width = '90%';  // Use percentage
         el.style.removeProperty('top');
         el.style.setProperty('top', '40%', 'important');
         el.style.setProperty('position', 'absolute', 'important');

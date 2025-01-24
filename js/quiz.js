@@ -70,6 +70,7 @@ function startQuiz() {
 function showQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const quizContainer = document.getElementById('quiz-container');
+    quizContainer.style.width = '90%';
     const progress = ((currentQuestionIndex) / 10) * 100;  // Always 10 questions
     
     quizContainer.innerHTML = `
@@ -147,6 +148,7 @@ function showReportCard() {
     const isPerfect = score === currentQuestions.length;
     
     const quizContainer = document.getElementById('quiz-container');
+    quizContainer.style.width = '90%';
     quizContainer.innerHTML = `
         <div class="report-card">
             <h2>Quiz Complete!</h2>

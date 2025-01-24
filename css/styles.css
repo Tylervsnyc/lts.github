@@ -1383,4 +1383,93 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* ===== Global Mobile-Friendly Styles ===== */
+@media (max-width: 768px) {  
+    body {
+        font-size: 16px !important;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .container {
+        width: 90% !important;
+        margin: 0 auto !important;
+        padding: 10px !important;
+    }
+
+    /* Header adjustments */
+    .watercolor-text {
+        font-size: 2rem !important;
+        padding: 20px !important;
+        margin: 20px auto !important;
+    }
+
+    /* Quiz container adjustments */
+    .quiz-content {
+        padding: 1rem !important;
+        margin: 1rem auto !important;
+    }
+
+    .question-text {
+        font-size: 1.1rem !important;
+    }
+
+    .choices-container {
+        gap: 0.5rem !important;
+    }
+
+    .choice-button {
+        padding: 0.8rem !important;
+        font-size: 1rem !important;
+        white-space: normal !important;  /* Allows text to wrap */
+    }
+
+    /* Name input adjustments */
+    .name-input {
+        width: 90% !important;
+        margin: 1rem auto !important;
+    }
+
+    #student-name {
+        width: 90% !important;
+        padding: 0.6rem !important;
+    }
+
+    /* Certificate adjustments */
+    .certificate-text {
+        font-size: 20px !important;
+        width: 90% !important;
+    }
+
+    #student-name {
+        font-size: 24px !important;
+    }
+
+    #chapter-number {
+        font-size: 20px !important;
+    }
+
+    /* Button adjustments */
+    .return-home-btn {
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem !important;
+        white-space: normal !important;
+    }
+
+    /* Progress tracker adjustments */
+    .tracker-steps {
+        gap: 5px !important;
+    }
+
+    .step-number {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .step-label {
+        font-size: 0.7rem !important;
+    }
 } 

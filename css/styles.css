@@ -1576,19 +1576,19 @@ body {
 .substack-link {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 80px;  /* Moved more towards center */
     z-index: 100;
-    display: block;  /* Ensure visibility */
+    display: block;
 }
 
 .substack-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 100px;  /* Increased from 60px */
+    height: 100px;  /* Increased from 60px */
+    border-radius: 12px;  /* Less rounded corners instead of 50% */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     animation: pulsate 2s infinite;
-    display: block;  /* Ensure visibility */
-    object-fit: cover;  /* Maintain aspect ratio */
+    display: block;
+    object-fit: cover;
 }
 
 @keyframes pulsate {
@@ -1611,4 +1611,13 @@ body {
     transform: scale(1.1);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
                 0 0 40px rgba(255, 215, 0, 0.6);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .substack-image {
+        width: 80px;  /* Larger on mobile too */
+        height: 80px;
+        border-radius: 8px;  /* Slightly less rounded on mobile */
+    }
 } 

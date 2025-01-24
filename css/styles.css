@@ -1576,7 +1576,7 @@ body {
 .substack-link {
     position: fixed;
     top: 20px;
-    right: 120px;  /* Moved further towards center */
+    right: 120px;
     z-index: 100;
     display: block;
 }
@@ -1585,22 +1585,20 @@ body {
     width: 140px;
     height: 140px;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
     display: block;
     object-fit: cover;
-    transition: all 0.3s ease;  /* Smooth transition for hover */
+    transition: transform 0.3s ease;  /* Only for hover scaling */
 }
 
 .substack-link:hover .substack-image {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
-                0 0 40px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05);  /* Subtle scale on hover */
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .substack-image {
-        width: 100px;  /* Still fairly large on mobile */
+        width: 100px;
         height: 100px;
         border-radius: 12px;
     }

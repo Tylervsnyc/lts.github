@@ -1566,4 +1566,42 @@ body {
         display: inline-block !important;
         vertical-align: middle !important;
     }
+}
+
+.substack-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.substack-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* Makes image circular */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+                    0 0 35px rgba(255, 215, 0, 0.4);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        transform: scale(1);
+    }
+}
+
+.substack-link:hover .substack-image {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
+                0 0 40px rgba(255, 215, 0, 0.6);
 } 

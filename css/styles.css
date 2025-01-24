@@ -992,7 +992,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Georgia', serif;
-    font-size: 24px;
+    font-size: 32px;  /* Increased from 24px */
     font-weight: bold;
     color: #003087;  /* Price is Right blue */
     text-align: center;

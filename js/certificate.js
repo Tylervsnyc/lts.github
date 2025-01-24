@@ -44,4 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update certificate fields
     document.getElementById('student-name').textContent = name;
     document.getElementById('chapter-number').textContent = chapter;
+
+    // Force text positioning
+    document.querySelectorAll('.certificate-text, .certificate-text-1, .certificate-text-2, .certificate-text-3').forEach(el => {
+        el.style.removeProperty('top');
+        el.style.setProperty('top', '40%', 'important');
+        el.style.setProperty('position', 'absolute', 'important');
+        el.style.setProperty('left', '50%', 'important');
+        el.style.setProperty('transform', 'translateX(-50%)', 'important');
+    });
 }); 

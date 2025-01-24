@@ -2,11 +2,13 @@
   "name": "learn-through-stories",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tylervsnyc.github.io/lts.github",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && touch out/.nojekyll && gh-pages -d out"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "gh-pages": "^6.1.1"
   }
 }

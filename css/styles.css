@@ -988,13 +988,9 @@ body {
 
 .certificate-text {
     position: absolute;
-    top: 35%;  /* Adjust this to align with golden line */
+    top: 45%;  /* Adjusted to align with golden line */
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Georgia', serif;
-    font-size: 32px;  /* Increased from 24px */
-    font-weight: bold;
-    color: #003087;  /* Price is Right blue */
     text-align: center;
     white-space: nowrap;
     background: none !important;
@@ -1003,11 +999,25 @@ body {
     outline: none !important;
 }
 
-#student-name, #chapter-number {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    color: inherit;
+/* Make the name bigger */
+#student-name {
+    font-family: 'Georgia', serif;
+    font-size: 40px;  /* Bigger size for the name */
+    font-weight: bold;
+    color: #003087;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    display: inline;
+}
+
+/* Slightly smaller text for "Chapter" and the number */
+.certificate-text, #chapter-number {
+    font-family: 'Georgia', serif;
+    font-size: 32px;  /* Smaller size for Chapter and number */
+    font-weight: normal;
+    color: #003087;
     background: none !important;
     border: none !important;
     box-shadow: none !important;

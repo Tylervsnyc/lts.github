@@ -1582,29 +1582,13 @@ body {
 }
 
 .substack-image {
-    width: 140px;  /* Made larger */
-    height: 140px;  /* Keep square aspect ratio */
-    border-radius: 15px;  /* Slightly rounded edges */
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    animation: pulsate 2s infinite;
     display: block;
     object-fit: cover;
-}
-
-@keyframes pulsate {
-    0% {
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        transform: scale(1);
-    }
-    50% {
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
-                    0 0 35px rgba(255, 215, 0, 0.4);
-        transform: scale(1.05);
-    }
-    100% {
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        transform: scale(1);
-    }
+    transition: all 0.3s ease;  /* Smooth transition for hover */
 }
 
 .substack-link:hover .substack-image {

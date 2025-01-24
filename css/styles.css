@@ -980,19 +980,41 @@ body {
 
 .overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 80%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#certificate-name, #certificate-age, #certificate-chapter {
-    margin: 10px 0;
+#certificate-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #003087;
+}
+
+#certificate-name {
     font-size: 1.8rem;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
+    margin: 1rem 0;
     color: #000;
+}
+
+#certificate-age, #certificate-chapter {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #000;
+}
+
+/* Position spans inside paragraphs */
+#certificate-name span,
+#certificate-age span,
+#certificate-chapter span {
+    font-weight: bold;
+    color: #003087;
+    margin-left: 0.5rem;
 }
 
 .student-value {

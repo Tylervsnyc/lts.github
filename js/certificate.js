@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chapter = params.get('chapter') || '';
 
     // Update certificate fields
-    document.querySelector('#certificate-name .student-value').textContent = name;
-    document.querySelector('#certificate-age .student-value').textContent = age;
-    document.querySelector('#certificate-chapter .student-value').textContent = chapter;
+    document.getElementById('student-name').textContent = name;
+    document.getElementById('student-age').textContent = age;
+    document.getElementById('chapter-number').textContent = chapter;
 }); 

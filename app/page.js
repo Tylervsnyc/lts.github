@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from './components/Header';
+import styles from '../css/styles.css';
 
 export default function Home() {
   const router = useRouter();
